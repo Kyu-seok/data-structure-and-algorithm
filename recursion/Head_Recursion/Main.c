@@ -1,17 +1,16 @@
 #include <stdio.h>
 
-void fun(int n)
+void function(int n) 
 {
     if (n > 0) {
+        function(n - 1);
         printf("%d ", n);
-        fun(n - 1);
     }
 }
 
 int main(void) 
 {
-    int x = 3;
-    fun(x);
+    function(3);
 
     return 0;
 }
