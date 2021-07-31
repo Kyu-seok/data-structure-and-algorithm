@@ -1,6 +1,10 @@
-Tree Recursion : Recursion which calls itself mulitple times
+# Tree Recursion  
+
+Tree Recursion is Recursion which calls itself mulitple times
+
 
 ```
+EXAMPLE CODE
 #include <stdio.h>
 
 void function(int n)

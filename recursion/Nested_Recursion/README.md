@@ -1,7 +1,9 @@
-Nested Recursion : Recursion in Recursion
-~~Now this is the fun part~~
+# Nested Recursion 
+
+Nested Recursion has Recursion in Recursion. ~~Now this is the fun part.~~
 
 ```
+EXAMPLE CODE
 #include <stdio.h>
 
 int function(int n) 

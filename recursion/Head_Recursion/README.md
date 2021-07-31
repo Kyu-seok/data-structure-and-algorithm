@@ -1,5 +1,9 @@
-Tail Recursion :
+# HEAD Recursion
+
+Head recursion is recursion which all actions are done AFTER recursive call. The logic is similar to the stack.
+
 ```
+EXAMPLE CODE
 #include <stdio.h>
 
 void function(int n) 

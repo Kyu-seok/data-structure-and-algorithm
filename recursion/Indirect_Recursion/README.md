@@ -1,6 +1,9 @@
-Indirect Recursion  :   multiple methods calling each others in a cycle, recursively.
+# Indirect Recursion
+
+Indirect Recursion has multiple methods calling each others in a cycle, recursively.
 
 ```
+EXAMPLE CODE
 #include <stdio.h>
 
 void funcB(int n);  

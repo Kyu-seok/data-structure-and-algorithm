@@ -1,5 +1,9 @@
-Tail Recursion :
+# Tail Recursion 
+
+Tail recursion is recursion which all actions are done BEFORE recursive call. The logic of this recursion is similar with using while loop.
+
 ```
+EXAMPLE CODE
 #include <stdio.h>
 
 void function(int n) 
