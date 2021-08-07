@@ -1,7 +1,6 @@
 # Data Structures & Algorithms using C and C++
 
-###### Contents :
-- [x] Recursion
+###### Data Structures :
 - [ ] Arrays
 - [ ] Strings
 - [ ] Matrices
@@ -14,7 +13,17 @@
 - [ ] Binary Search Tree
 - [ ] AVL Tree
 - [ ] Heap
-- [ ] Sorting Techniques
-- [ ] Hashing Technique
 - [ ] Graphs
 - [ ] Asymptotic Notations
+
+
+###### Algorithms :
+- [x] Recursion
+- [ ] Sorting Techniques
+- [ ] Hashing Technique
+- [ ] Greedy Method
+- [ ] Dynamic Programming
+- [ ] Brute Force
+- [ ] Branch and Bound
+- [ ] NP-Hard
+- [ ] String Matching
