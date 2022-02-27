@@ -15,6 +15,4 @@ public class Main {
         sLL.traverseSinglyLinkedList();
     }
 
-
-
 }
