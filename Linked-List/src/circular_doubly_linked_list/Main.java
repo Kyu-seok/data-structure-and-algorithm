@@ -5,6 +5,8 @@ public class Main {
         CircularDoublyLinkedList cdll = new CircularDoublyLinkedList();
         cdll.createCDLL(1);
         cdll.insertNode(2, 0);
-        System.out.println(cdll.head.value);
+        cdll.insertNode(3, 2);
+        cdll.insertNode(4, 5);
+        cdll.traverseCDLL();
     }
 }
