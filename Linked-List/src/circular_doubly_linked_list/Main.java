@@ -8,6 +8,6 @@ public class Main {
         cdll.insertNode(3, 2);
         cdll.insertNode(4, 5);
         cdll.traverseCDLL();
-        cdll.reverseTraversalCDLL();
+        cdll.searchNode(9);
     }
 }
