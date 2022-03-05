@@ -145,4 +145,16 @@ public class CircularDoublyLinkedList {
         }
     }
 
+    // Delete Entire CDLL
+    public void deleteCDLL() {
+        DoublyNode tempNode = head;
+        for (int i = 0; i < size; i++) {
+            tempNode.prev = null;
+            tempNode = tempNode.next;
+        }
+        head = null;
+        tail = null;
+        System.out.println("The CDLL ahs been deleted!");
+    }
+
 }
