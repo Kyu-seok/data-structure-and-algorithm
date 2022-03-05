@@ -8,6 +8,7 @@ public class Main {
         cdll.insertNode(3, 2);
         cdll.insertNode(4, 5);
         cdll.traverseCDLL();
-        cdll.searchNode(9);
+        cdll.deleteCDLL();
+        cdll.traverseCDLL();
     }
 }
