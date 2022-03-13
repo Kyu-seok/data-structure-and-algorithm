@@ -10,6 +10,9 @@ public class Main {
         ll.insertNode(4);
         ll.insertNode(5);
         ll.traversalLL();
+        Questions q = new Questions();
+        Node n = q.nthToLast(ll, 2);
+        System.out.println(n.value);
     }
 
 }
