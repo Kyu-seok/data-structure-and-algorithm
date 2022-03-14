@@ -3,16 +3,24 @@ package LinkedListQuestions;
 public class Main {
 
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
-        ll.createLL(1);
-        ll.insertNode(2);
-        ll.insertNode(3);
-        ll.insertNode(4);
-        ll.insertNode(5);
-        ll.traversalLL();
+        LinkedList llA = new LinkedList();
+        llA.insertNode(3);
+        llA.insertNode(1);
+        llA.insertNode(5);
+        llA.insertNode(9);
+        LinkedList llB = new LinkedList();
+        llB.insertNode(2);
+        llB.insertNode(4);
+        llB.insertNode(6);
+
         Questions q = new Questions();
-        Node n = q.nthToLast(ll, 2);
-        System.out.println(n.value);
+        q.addSameNode(llA, llB, 7);
+        q.addSameNode(llA, llB, 2);
+        q.addSameNode(llA, llB, 1);
+
+        Node inter = q.findIntersection(llA, llB);
+        System.out.println(inter.value);
+
     }
 
 }
