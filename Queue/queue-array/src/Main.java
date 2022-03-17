@@ -5,7 +5,7 @@ public class Main {
         newQueue.enQueue(1);
         newQueue.enQueue(2);
         newQueue.enQueue(3);
-        newQueue.enQueue(4);
+        newQueue.deleteQueue();
     }
 
 }

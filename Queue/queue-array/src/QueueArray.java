@@ -42,4 +42,32 @@ public class QueueArray {
         }
     }
 
+    public int deQueue() {
+        if (isEmpty()) {
+            System.out.println("The Queue is empty!");
+            return -1;
+        } else {
+            int result = arr[beginningOfQueue];
+            beginningOfQueue++;
+            if (beginningOfQueue > topOfQueue) {
+                beginningOfQueue = topOfQueue = -1;
+            }
+            return result;
+        }
+    }
+
+    public int peek() {
+        if (!isEmpty()) {
+            return arr[beginningOfQueue];
+        } else {
+            System.out.println("The Queue is empty!");
+            return -1;
+        }
+    }
+
+    public void deleteQueue() {
+        arr = null;
+        System.out.println("The Queue is successfully deleted");
+    }
+
 }
