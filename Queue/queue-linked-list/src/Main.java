@@ -4,7 +4,6 @@ public class Main {
         newQLL.enQueue(10);
         newQLL.enQueue(20);
         newQLL.enQueue(30);
-        boolean result = newQLL.isEmpty();
-        System.out.println(result);
+        newQLL.deleteQueue();
     }
 }
