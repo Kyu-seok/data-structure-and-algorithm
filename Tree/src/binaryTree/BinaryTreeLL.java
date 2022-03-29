@@ -160,4 +160,11 @@ public class BinaryTreeLL {
         }
         System.out.println("The node does not exist in this BT");
     }
+
+    // Delete Binary Tree
+    void deleteBT() {
+        root = null;
+        System.out.println("BT has been successfully deleted");
+    }
+
 }
