@@ -29,4 +29,30 @@ public class BinaryTree {
         }
     }
 
+    public void preOrder(int index) {
+        if (index > lastUsedIndex) {
+            return;
+        }
+        System.out.println(arr[index] + " ");
+        preOrder(index * 2);
+        preOrder(index * 2 + 1);
+    }
+
+    public void inOrder(int index) {
+        if (index > lastUsedIndex) {
+            return;
+        }
+        inOrder(index * 2);
+        System.out.println(arr[index] + " ");
+        inOrder(index * 2 + 1);
+    }
+
+    public void postOrder(int index) {
+        if (index > lastUsedIndex) {
+            return;
+        }
+        postOrder(index * 2);
+        postOrder(index * 2 + 1);
+        System.out.println(arr[index] + " ");
+    }
 }
