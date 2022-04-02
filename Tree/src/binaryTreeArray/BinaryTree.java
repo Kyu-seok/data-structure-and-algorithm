@@ -62,4 +62,15 @@ public class BinaryTree {
         }
     }
 
+    public int search(String value) {
+        for (int i = 1; i <= lastUsedIndex; i++) {
+            if (arr[i] == value) {
+                System.out.println(value + " exists at location " + i);
+                return i;
+            }
+        }
+        System.out.println("The value does not exist in BT");
+        return -1;
+    }
+
 }
