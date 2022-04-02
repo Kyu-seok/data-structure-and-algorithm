@@ -14,7 +14,7 @@ public class Main {
         newBinaryTree.insert("N8");
         newBinaryTree.insert("N9");
         System.out.println();
-        newBinaryTree.preOrder(1);
+        newBinaryTree.search("N5");
     }
 
 }
