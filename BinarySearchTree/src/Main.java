@@ -13,6 +13,9 @@ public class Main {
         newBST.insert(40);
 
         newBST.levelOrder();
+        System.out.println();
+        newBST.deleteNode(newBST.root, 90);
+        newBST.levelOrder();
     }
 
 }
