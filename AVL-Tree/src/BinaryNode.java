@@ -1,5 +1,3 @@
-import jdk.incubator.vector.VectorOperators;
-
 public class BinaryNode {
     public int value;
     public int height;
