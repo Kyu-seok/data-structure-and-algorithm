@@ -122,4 +122,9 @@ public class BinaryHeap {
         }
     }
 
+    public void deleteBH() {
+        arr = null;
+        System.out.println("BH has been successfully deleted");
+    }
+
 }
