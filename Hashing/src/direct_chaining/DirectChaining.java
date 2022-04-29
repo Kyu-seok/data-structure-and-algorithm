@@ -1,3 +1,5 @@
+package direct_chaining;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -23,10 +25,8 @@ public class DirectChaining {
         int newIndex = modASCIIHashFunction(word, hashTable.length);
         if (hashTable[newIndex] == null) {
             hashTable[newIndex] = new LinkedList<>();
-            hashTable[newIndex].add(word);
-        } else {
-            hashTable[newIndex].add(word);
         }
+        hashTable[newIndex].add(word);
     }
 
     public void displayHashTable() {

@@ -1,3 +1,5 @@
+package direct_chaining;
+
 public class Main {
     public static void main(String[] args) {
         DirectChaining directChaining = new DirectChaining(13);
@@ -6,6 +8,7 @@ public class Main {
         directChaining.insertHashTable("brown");
         directChaining.insertHashTable("fox");
         directChaining.insertHashTable("over");
+        directChaining.deleteKeyHashTable("The");
         directChaining.displayHashTable();
 
     }
