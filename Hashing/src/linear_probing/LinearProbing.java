@@ -21,6 +21,11 @@ public class LinearProbing {
         return sum % M;
     }
 
+    public double getLoadFactor() {
+        double loadFactor = usedCellNumber * 1.0 / hashTable.length;
+        return loadFactor;
+    }
+
 
 
 }
