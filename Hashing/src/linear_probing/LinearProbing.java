@@ -26,6 +26,19 @@ public class LinearProbing {
         return loadFactor;
     }
 
-
+    public void rehashKeys(String word) {
+        usedCellNumber = 0;
+        ArrayList<String> data = new ArrayList<>();
+        for (String s : hashTable) {
+            if (s != null) {
+                data.add(s);
+            }
+            data.add(word);
+            hashTable = new String[hashTable.length * 2];
+            for (String s : data) {
+                // Insert in Hash Table
+            }
+        }
+    }
 
 }
