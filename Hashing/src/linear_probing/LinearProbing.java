@@ -25,7 +25,6 @@ public class LinearProbing {
         double loadFactor = usedCellNumber * 1.0 / hashTable.length;
         return loadFactor;
     }
-
     public void rehashKeys(String word) {
         usedCellNumber = 0;
         ArrayList<String> data = new ArrayList<>();
@@ -35,10 +34,41 @@ public class LinearProbing {
             }
             data.add(word);
             hashTable = new String[hashTable.length * 2];
-            for (String s : data) {
-                // Insert in Hash Table
+            for (String string : data) {
+                insertInHashTable(string);
             }
         }
     }
 
+    public void insertInHashTable(String word) {
+        double loadFactor = getLoadFactor();
+        if (loadFactor >= 0.75) {
+            rehashKeys(word);
+        } else {
+            int index = modASCIIHashFunction(word, hashTable.length);
+            for (int i = index; i < hashTable.length; i++) {
+                int newIndex = i % hashTable.length;
+                if (hashTable[newIndex] == null) {
+                    hashTable[newIndex] = word;
+                    System.out.println("The " + word + " successfully inserted at location: " + newIndex);
+                    break;
+                } else {
+                    System.out.println(newIndex + " is already occupied. Try next empty cell");
+                }
+            }
+        }
+        usedCellNumber++;
+    }
+
+    public void displayHashTable() {
+        if (hashTable == null) {
+            System.out.println("\nHashTable does not exists");
+            return;
+        } else {
+            System.out.println("\n---------HashTable---------");
+            for (int i = 0; i < hashTable.length; i++) {
+                System.out.println("Index " + i + ", key: " + hashTable[i]);
+            }
+        }
+    }
 }
