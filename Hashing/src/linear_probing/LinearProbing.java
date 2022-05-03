@@ -85,4 +85,17 @@ public class LinearProbing {
         return false;
     }
 
+    public void deleteKeyHashTable(String word) {
+        int index = modASCIIHashFunction(word, hashTable.length);
+        for (int i = index; i < index + hashTable.length; i++) {
+            int newIndex = i % hashTable.length;
+            if (hashTable[newIndex] != null && hashTable[newIndex].equals(word)) {
+                hashTable[newIndex] = null;
+                System.out.println(word + " has been deleted in hashTable");
+                return;
+            }
+            System.out.println(word + " not found in hashTable");
+        }
+    }
+
 }
