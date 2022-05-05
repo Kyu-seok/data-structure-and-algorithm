@@ -1,4 +1,4 @@
-package QuadraticProbing;
+package quadratic_probing;
 
 import java.util.ArrayList;
 
@@ -41,7 +41,27 @@ public class QuadraticProbing {
         }
     }
 
-    //insertInHashTable()
+    public void insertInHashTable(String word) {
+        double loadFactor = getLoadFactor();
+        if (loadFactor >= 0.75) {
+            rehashKeys(word);
+        } else {
+            int index = modASCIIHashFunction(word, hashTable.length);
+            int counter = 0;
+            for (int i = index; i < index + hashTable.length; i++) {
+                int newIndex = (index + (counter * counter)) % hashTable.length;
+                if (hashTable[newIndex] == null) {
+                    hashTable[newIndex] = word;
+                    System.out.println(word + " has been inserted successfully");
+                    break;
+                } else {
+                    System.out.println(newIndex + " is already occupied. Trying next one...");
+                }
+                counter++;
+            }
+        }
+        usedCellNumber++;
+    }
 
     public void displayHashTable() {
         if (hashTable == null) {
