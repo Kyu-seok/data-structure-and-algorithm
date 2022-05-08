@@ -1,10 +1,10 @@
 public class Searching {
 
     private int linearSearch(int arr[], int value) {
+        int oN = 0;
         if (value < 0) {
             throw new IllegalArgumentException("Entered value is negative");
         }
-        int oN = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == value) {
                 System.out.println("[LINEAR_SEARCH] : The element is found with O[" + oN + "]");
@@ -17,13 +17,13 @@ public class Searching {
     }
 
     private int binarySearch(int arr[], int value) {
-        if (value < 0) {
-            throw new IllegalArgumentException("Entered value is negative");
-        }
         int oN = 0;
         int start = 0;
         int end = arr.length - 1;
         int middle = (start + end) / 2;
+        if (value < 0) {
+            throw new IllegalArgumentException("Entered value is negative");
+        }
         while (arr[middle] != value && start <= end) {
             if (value < arr[middle]) {
                 end = middle - 1;
