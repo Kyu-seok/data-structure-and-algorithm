@@ -1,4 +1,4 @@
-# Data Structures & Algorithms using C and C++
+# Data Structures & Algorithms using Java & C
 
 ###### Data Structures :
 - [x] Arrays
