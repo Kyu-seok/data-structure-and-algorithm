@@ -1,12 +1,13 @@
 public class Searching {
 
     private int linearSearch(int arr[], int value) {
-        // may throw exception if input is negative
+        if (value < 0) {
+            throw new IllegalArgumentException("Entered value is negative");
+        }
         int oN = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == value) {
                 System.out.println("[LINEAR_SEARCH] : The element is found with O[" + oN + "]");
-                // return i;
                 return oN;
             }
             oN++;
@@ -16,7 +17,9 @@ public class Searching {
     }
 
     private int binarySearch(int arr[], int value) {
-        // may throw exception if input is negative
+        if (value < 0) {
+            throw new IllegalArgumentException("Entered value is negative");
+        }
         int oN = 0;
         int start = 0;
         int end = arr.length - 1;
@@ -30,7 +33,7 @@ public class Searching {
             middle = (start + end) / 2;
             oN++;
         }
-        if (arr[middle] == value) {     // return (arr[middle] == value) ? middle : -1;
+        if (arr[middle] == value) {
             System.out.println("[BINARY_SEARCH] : The element is found with O[" + oN + "]");
             return oN;
         } else {
@@ -45,9 +48,12 @@ public class Searching {
         System.out.println("\n------------------------CASE 1024------------------------\n");
         linearON = linearSearch(arr, value);
         binaryON = binarySearch(arr, value);
-        // if any of them is -1, print error
-        double ratio =  (double) linearON / (double) binaryON;
-        System.out.println("BinarySearch is x" + String.format("%.2f", ratio) + " times faster than LinearSearch in sorted array.\n");
+        if (linearON == -1 || binaryON == -1) {
+            System.out.println("The element " + value + " not found.");
+        } else {
+            double ratio =  (double) linearON / (double) binaryON;
+            System.out.println("BinarySearch is x" + String.format("%.2f", ratio) + " times faster than LinearSearch in sorted array.\n");
+        }
     }
 
     public void case8192(int value) {
@@ -56,9 +62,12 @@ public class Searching {
         System.out.println("\n------------------------CASE 8192------------------------\n");
         linearON = linearSearch(arr, value);
         binaryON = binarySearch(arr, value);
-        // if any of them is -1, print error
-        double ratio =  (double) linearON / (double) binaryON;
-        System.out.println("BinarySearch is x" + String.format("%.2f", ratio) + " times faster than LinearSearch in sorted array.\n");
+        if (linearON == -1 || binaryON == -1) {
+            System.out.println("The element " + value + " not found.");
+        } else {
+            double ratio =  (double) linearON / (double) binaryON;
+            System.out.println("BinarySearch is x" + String.format("%.2f", ratio) + " times faster than LinearSearch in sorted array.\n");
+        }
     }
 
     private int[] generateArray(int number) {
