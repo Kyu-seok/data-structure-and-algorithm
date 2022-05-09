@@ -2,6 +2,7 @@ public class Searching {
 
     private int linearSearch(int arr[], int value) {
         int oN = 0;
+        // TODO: throw new NullPointerException("Null array input") when arr is null
         if (value < 0) {
             throw new IllegalArgumentException("Entered value is negative");
         }
@@ -21,6 +22,7 @@ public class Searching {
         int start = 0;
         int end = arr.length - 1;
         int middle = (start + end) / 2;
+        // TODO: throw new NullPointerException("Null array input") when arr is null
         if (value < 0) {
             throw new IllegalArgumentException("Entered value is negative");
         }
