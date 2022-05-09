@@ -70,9 +70,18 @@ public class Searching {
         }
     }
 
-    private int[] generateArray(int number) {
+    /**
+     * This method returns array of sorted integer except for divisor of 5
+     *
+     * @param number The size of array
+     * @return The generated array of sorted integer
+     */
+    public int[] generateArray(int number) {
         int arr[] = new int[number];
         for (int i = 0; i < number; i++) {
+            if (i % 5 == 0) {
+                continue;
+            }
             arr[i] = i;
         }
         return arr;
