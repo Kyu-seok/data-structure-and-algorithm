@@ -3,6 +3,7 @@ public class Searching {
     private int linearSearch(int arr[], int value) {
         int oN = 0;
         // TODO: throw new NullPointerException("Null array input") when arr is null
+        // TODO: throw new Exception when isSorted is false;
         if (value < 0) {
             throw new IllegalArgumentException("Entered value is negative");
         }
@@ -17,12 +18,13 @@ public class Searching {
         return -1;
     }
 
-    private int binarySearch(int arr[], int value) {
+    private int binarySearch(int arr[], int value, boolean isSorted) {
         int oN = 0;
         int start = 0;
         int end = arr.length - 1;
         int middle = (start + end) / 2;
         // TODO: throw new NullPointerException("Null array input") when arr is null
+        // TODO: throw new Exception when isSorted is false;
         if (value < 0) {
             throw new IllegalArgumentException("Entered value is negative");
         }
@@ -49,7 +51,7 @@ public class Searching {
         int linearON, binaryON;
         System.out.println("\n------------------------CASE 1024------------------------\n");
         linearON = linearSearch(arr, value);
-        binaryON = binarySearch(arr, value);
+        binaryON = binarySearch(arr, value, true);
         if (linearON == -1 || binaryON == -1) {
             System.out.println("The element " + value + " not found.");
         } else {
@@ -63,7 +65,7 @@ public class Searching {
         int linearON, binaryON;
         System.out.println("\n------------------------CASE 8192------------------------\n");
         linearON = linearSearch(arr, value);
-        binaryON = binarySearch(arr, value);
+        binaryON = binarySearch(arr, value, true);
         if (linearON == -1 || binaryON == -1) {
             System.out.println("The element " + value + " not found.");
         } else {
