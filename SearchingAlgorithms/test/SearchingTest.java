@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SearchingTest {
 
-    static int arrNull[], arr0[], arr10[];
+    static int arrNull[], arr0[], arr1[], arr10[];
     static Searching searching;
 
     @BeforeAll
@@ -13,13 +13,18 @@ class SearchingTest {
         searching = new Searching();
         arrNull = null;
         arr0 = new int[0];
+        arr1 = searching.generateSortedArrayWithoutMultipleOf5(1);
         arr10 = searching.generateSortedArrayWithoutMultipleOf5(10);
         System.out.println("Running a test...");
     }
 
     @Test
     public void linearSearchPrimePathCoverage() {
-        assertEquals(-1, searching.linearSearch(arr10, 19));
+        assertThrows(IllegalArgumentException.class, () -> searching.linearSearch(arrNull, -1));
+        assertEquals(-1, searching.linearSearch(arr0, 1));
+        assertEquals(1, searching.linearSearch(arr10, 0));
+        assertEquals(-1, searching.linearSearch(arr1, 1));
+        assertEquals(3, searching.linearSearch(arr10, 2));
     }
 
     @Test
