@@ -1,6 +1,6 @@
 public class Searching {
 
-    private int linearSearch(int arr[], int value) {
+    public int linearSearch(int arr[], int value) {
         int oN = 0;
         if (arr == null) {
             throw new NullPointerException("Null array input");
@@ -19,7 +19,7 @@ public class Searching {
         return -1;
     }
 
-    private int binarySearch(int arr[], int value, boolean isSorted) {
+    public int binarySearch(int arr[], int value, boolean isSorted) {
         int oN = 0;
         int start = 0;
         int end = arr.length - 1;
@@ -77,18 +77,20 @@ public class Searching {
     }
 
     /**
-     * This method returns array of sorted integer except for divisor of 5
+     * This method returns array of sorted integer except for multiple of 5
      *
      * @param number The size of array
      * @return The generated array of sorted integer
      */
     public int[] generateArray(int number) {
         int arr[] = new int[number];
+        int num = 0;
         for (int i = 0; i < number; i++) {
-            if (i % 5 == 0) {
-                continue;
+            if ((num % 5 == 0) && num != 0) {
+                num++;
             }
-            arr[i] = i;
+            arr[i] = num;
+            num++;
         }
         return arr;
     }
