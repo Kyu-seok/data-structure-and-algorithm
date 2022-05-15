@@ -30,7 +30,7 @@ class SearchingTest {
     @Test
     public void linearSearchBaseChoiceCoverage() {
         assertEquals(2, searching.linearSearch(arr10, 1));
-        assertThrows(NullPointerException.class, () -> searching.linearSearch(arrNull, 1));
+        assertThrows(IllegalArgumentException.class, () -> searching.linearSearch(arrNull, 1));
         assertEquals(-1, searching.linearSearch(arr0, 1));
         assertThrows(IllegalArgumentException.class, () -> searching.linearSearch(arr10, -1));
         assertEquals(1, searching.linearSearch(arr10, 0));
@@ -40,13 +40,21 @@ class SearchingTest {
 
     @Test
     public void binarySearchPrimePathCoverage() {
+        assertThrows(IllegalArgumentException.class, () -> searching.binarySearch(arr10, -1, false));
+        assertEquals(-1, searching.binarySearch(arr0, 5, true));
+        assertEquals(1, searching.binarySearch(arr1, 0, true));
+        assertEquals(-1, searching.binarySearch(arr1, 1, true));
+        assertEquals(-1, searching.binarySearch(arr10, 10, true));
+        assertEquals(-1, searching.binarySearch(arr10, 5, true));
+        assertEquals(3, searching.binarySearch(arr10, 2, true));
+        assertEquals(3, searching.binarySearch(arr10, 0, true));
 
     }
 
     @Test
     public void binarySearchBaseChoiceCoverage() {
         assertEquals(2, searching.binarySearch(arr10, 1, true));
-        assertThrows(NullPointerException.class, () -> searching.binarySearch(arrNull, 1, true));
+        assertThrows(Exception.class, () -> searching.binarySearch(arrNull, 1, true));
         assertEquals(-1, searching.binarySearch(arr0, 1, true));
         assertThrows(IllegalArgumentException.class, () -> searching.binarySearch(arr10, -1, true));
         assertEquals(3, searching.binarySearch(arr10, 0, true));
