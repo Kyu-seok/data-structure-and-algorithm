@@ -35,7 +35,6 @@ class SearchingTest {
         assertThrows(IllegalArgumentException.class, () -> searching.linearSearch(arr10, -1));
         assertEquals(1, searching.linearSearch(arr10, 0));
         assertEquals(-1, searching.linearSearch(arr10, 5));
-
     }
 
     @Test
@@ -48,7 +47,6 @@ class SearchingTest {
         assertEquals(-1, searching.binarySearch(arr10, 5, true));
         assertEquals(3, searching.binarySearch(arr10, 2, true));
         assertEquals(3, searching.binarySearch(arr10, 0, true));
-
     }
 
     @Test
