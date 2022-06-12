@@ -1,3 +1,5 @@
+package graphAdjacencyMatrix;
+
 public class GraphNode {
     public String name;
     public int index;

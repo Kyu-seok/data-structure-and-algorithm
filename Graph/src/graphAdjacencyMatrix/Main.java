@@ -1,4 +1,5 @@
-import java.awt.image.AreaAveragingScaleFilter;
+package graphAdjacencyMatrix;
+
 import java.util.ArrayList;
 
 public class Main {
