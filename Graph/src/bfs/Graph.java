@@ -3,7 +3,7 @@ package bfs;
 import java.util.ArrayList;
 
 public class Graph {
-    ArrayList<GraphNode> nodeList;
+    ArrayList<GraphNode> nodeList = new ArrayList<>();
     int[][] adjacencyMatrix;
 
     public Graph(ArrayList<GraphNode> nodeList) {
@@ -33,5 +33,18 @@ public class Graph {
         }
         return s.toString();
     }
+
+    // get Neighbors
+    public ArrayList<GraphNode> getNeighbors(GraphNode node) {
+        ArrayList<GraphNode> neighbors = new ArrayList<>();
+        int nodeIndex = node.index;
+        for (int i = 0; i < adjacencyMatrix.length; i++) {
+            if (adjacencyMatrix[nodeIndex][i] == 1) {
+                neighbors.add(nodeList.get(i));
+            }
+        }
+        return neighbors;
+    }
+
 
 }
