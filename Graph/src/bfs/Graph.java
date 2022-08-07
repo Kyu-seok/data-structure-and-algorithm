@@ -59,6 +59,7 @@ public class Graph {
             for (GraphNode neighbor : neighbors) {
                 if (!neighbor.isVisited) {
                     queue.add(neighbor);
+                    neighbor.isVisited = true;
                 }
             }
         }
