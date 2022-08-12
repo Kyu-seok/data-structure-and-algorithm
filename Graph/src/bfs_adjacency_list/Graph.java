@@ -1,6 +1,7 @@
 package bfs_adjacency_list;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Graph {
 
@@ -32,5 +33,24 @@ public class Graph {
         }
         return s.toString();
     }
+
+    // BFS internal
+    void bfsVisit(GraphNode node) {
+        LinkedList<GraphNode> queue = new LinkedList<>();
+        queue.add(node);
+        while (!queue.isEmpty()) {
+            GraphNode currentNode = queue.remove(0);
+            currentNode.isVisited = true;
+            System.out.print(currentNode.name + " ");
+            for (GraphNode neighbor : currentNode.neighbour) {
+                if (!neighbor.isVisited) {
+                    queue.add(neighbor);
+                    neighbor.isVisited = true;
+                }
+            }
+        }
+    }
+
+
 
 }
