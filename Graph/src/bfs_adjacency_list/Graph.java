@@ -51,6 +51,12 @@ public class Graph {
         }
     }
 
-
+    void bfs() {
+        for (GraphNode node : nodeList) {
+            if (!node.isVisited) {
+                bfsVisit(node);
+            }
+        }
+    }
 
 }
