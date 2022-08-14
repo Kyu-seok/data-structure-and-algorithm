@@ -1,4 +1,4 @@
-package bfs_adjacency_matrix;
+package bfs_dfs_adjacency_matrix;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

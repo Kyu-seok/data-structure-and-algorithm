@@ -1,4 +1,4 @@
-package bfs_adjacency_matrix;
+package bfs_dfs_adjacency_matrix;
 
 public class GraphNode {
     public String name;
