@@ -2,6 +2,7 @@ package bfs_dfs_adjacency_list;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Stack;
 
 public class Graph {
 
@@ -58,5 +59,23 @@ public class Graph {
             }
         }
     }
+
+    void dfsVisit(GraphNode node) {
+        Stack<GraphNode> stack = new Stack<>();
+        stack.push(node);
+        while (!stack.isEmpty()) {
+            GraphNode currentNode = stack.pop();
+            currentNode.isVisited = true;
+            System.out.print(currentNode.name + " ");
+            for (GraphNode neighbour : currentNode.neighbour) {
+                if (!neighbour.isVisited) {
+                    stack.push(neighbour);
+                    neighbour.isVisited = true;
+                }
+            }
+        }
+    }
+
+
 
 }
