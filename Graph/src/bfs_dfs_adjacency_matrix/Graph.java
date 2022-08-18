@@ -91,5 +91,12 @@ public class Graph {
         }
     }
 
+    void dfs() {
+        for (GraphNode node : nodeList) {
+            if (!node.isVisited) {
+                dfsVisit(node);
+            }
+        }
+    }
 
 }
